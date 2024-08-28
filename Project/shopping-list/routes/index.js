@@ -53,8 +53,8 @@ router.get('/lists/:id/edit', (req, res) => {
 router.post('/lists', (req, res) => {
   const newlist = {
     id: lists.length + 1,
-    name: req.body.name,
-    email: req.body.email,
+    item: req.body.item,
+    price: req.body.price,
   };
 
   lists.push(newlist);
@@ -80,8 +80,8 @@ router.put('/update/:id', (req, res) => {
 
   const newlist = {
     id: Number(id),
-    name: req.body.name,
-    email: req.body.email,
+    item: req.body.item,
+    price: req.body.price,
   };
 
   const index = lists.findIndex((c) => c.id === Number(id));

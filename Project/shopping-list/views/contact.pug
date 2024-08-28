@@ -1,7 +1,7 @@
-h2 #{list.item}
+h2 #{list.name}
 
-p #[strong Item:] #{list.item}
-p #[strong Price:] #{list.price}
+p #[strong Name:] #{list.name}
+p #[strong Email:] #{list.email}
 
 div.actions
   form(method='POST', action=`/delete/${list.id}?_method=DELETE`)
@@ -11,11 +11,11 @@ div.actions
       hx-target='#sidebar',
       hx-push-url='/lists'
       class='link'
-    ) Delete List
+    ) Delete list
 
   a(
     href=`/lists/${list.id}/edit`,
     hx-get=`/lists/${list.id}/edit`,
     hx-push-url='true',
     hx-target='#content'
-  ) Edit List
+  ) Edit list

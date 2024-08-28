@@ -1,7 +1,7 @@
-h2 #{list.name}
+h2 #{list.item}
 
-p #[strong Name:] #{list.name}
-p #[strong Email:] #{list.email}
+p #[strong item:] #{list.item}
+p #[strong price:] #{list.price}
 
 div.actions
   form(method='POST', action=`/delete/${list.id}?_method=DELETE`)

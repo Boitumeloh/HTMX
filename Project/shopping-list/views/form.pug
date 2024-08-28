@@ -1,6 +1,6 @@
 - isEditing = () => !(Object.keys(list).length === 0);
 
-h2=isEditing() ? "Edit List" : "New List"
+h2=isEditing() ? "Edit list" : "New list"
 
 form(
   action=isEditing() ? `/update/${list.id}?_method=PUT` : '/lists',
@@ -15,7 +15,7 @@ form(
   label(for='item') item:
   input#item(type='text', item='item', required, value=list.item)
 
-  label(for='price') Price:
+  label(for='price') price:
   input#price(type='price', item='price', required, value=list.price)
 
   div.actions
